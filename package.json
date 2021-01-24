@@ -1,0 +1,20 @@
+{
+  "name": "dmchallengejs",
+  "version": "1.0.0",
+  "description": "Pedro Boechat's submission for DM Tech Challenge 2020 in NodeJS",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pedro Boechat",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  }
+}
