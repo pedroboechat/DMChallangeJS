@@ -1,12 +1,12 @@
 // const http = require('http');
 const axios = require('axios');
-const bodyParser = require("body-parser");
 
 // Receives the 'ingredients' and uses RecipePuppy's API to return an array of recipes with them
 const getRP = async (ingredients) => {
     try {
         const response = await axios.get(`http://www.recipepuppy.com/api/?i=${ingredients}`)
-        return response.data.results;
+        // return response.data.results;
+        return response.data.results.slice(1,3);
     } catch (error) {
         console.log(error);
         return [];
