@@ -4,7 +4,6 @@ const dotenv = require("dotenv");
 
 // Controller import
 const recipeController = require("./controllers/recipes");
-const errorController = require("./controllers/error");
 
 // Configure environment variables
 dotenv.config();
@@ -21,7 +20,7 @@ app.get("/", (req, res) => {
 app.get("/recipes", recipeController.getRecipe);
 
 app.use((req, res) => {
-    return res.json({message: "Page Not Found"});
+    return res.status(404).json({message: "Page not found"});
 });
 
 // Listen to port 80
